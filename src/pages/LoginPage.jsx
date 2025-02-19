@@ -36,26 +36,26 @@ axios.post(`${import.meta.env.VITE_BASE_URL}/v2/admin/signin`,account)
 }
 
 
-    const checkUser = async()=>{
-        try{
-         await axios.post(`${import.meta.env.VITE_BASE_URL}/v2/api/user/check`) ;
-         getProducts();
-         setIsAuth(true);
-        }
-        catch(error){
-     //     console.error(error)
-        }
-      }
+    // const checkUser = async()=>{
+    //     try{
+    //      await axios.post(`${import.meta.env.VITE_BASE_URL}/v2/api/user/check`) ;
+    //      getProducts();
+    //      setIsAuth(true);
+    //     }
+    //     catch(error){
+    //  //     console.error(error)
+    //     }
+    //   }
       
-      useEffect(()=>{
-        const token = document.cookie.replace(
-          /(?:(?:^|.*;\s*)hexToken\s*\=\s*([^;]*).*$)|^.*$/,
-          "$1",
-        );
+    //   useEffect(()=>{
+    //     const token = document.cookie.replace(
+    //       /(?:(?:^|.*;\s*)hexToken\s*\=\s*([^;]*).*$)|^.*$/,
+    //       "$1",
+    //     );
       
-        axios.defaults.headers.common['Authorization'] = token;
-        checkUser();
-      },[])
+    //     axios.defaults.headers.common['Authorization'] = token;
+    //     checkUser();
+    //   },[])
         
 
 
