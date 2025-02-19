@@ -39,11 +39,11 @@ axios.post(`${import.meta.env.VITE_BASE_URL}/v2/admin/signin`,account)
     const checkUser = async()=>{
         try{
          await axios.post(`${import.meta.env.VITE_BASE_URL}/v2/api/user/check`) ;
-        // getProducts();
+         getProducts();
          setIsAuth(true);
         }
         catch(error){
-          console.error(error)
+     //     console.error(error)
         }
       }
       
